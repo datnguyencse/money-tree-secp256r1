@@ -58,6 +58,13 @@ If you have a serious problem with this and REALLY need it to work on previous v
 
 These instructions assume you have a decent understanding of how Bitcoin wallets operate and a cursory knowledge of how a [Hierarchical Deterministic Bitcoin Wallet (HD Wallet)](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) works.
 
+### Set curve name and id (tested with secp256k1 and prime256v1)
+```ruby
+MoneyTree.setCurve('prime256v1', 415)
+```
+[OpenSSL Curve List](https://docs.huihoo.com/doxygen/openssl/1.0.1c/crypto_2objects_2obj__mac_8h.html)
+
+
 ### Create a Master Node (seed)
 
 To create a new HD Wallet, we're going to create a tree structure of private/public keypairs (nodes).  You'll first want to start with a master node. This master node should be seeded with at least 16 random bytes but preferably 32 random bytes from a cryptographically secure PRNG (pseudo-random number generator).
