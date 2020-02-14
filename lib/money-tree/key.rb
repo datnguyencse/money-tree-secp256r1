@@ -176,7 +176,6 @@ module MoneyTree
         @key = @raw_key = to_hex
       else
         @raw_key = p_key
-        debugger
         @group = PKey::EC::Group.new MoneyTree.getCurve()[:name] || GROUP_NAME
         @key = parse_raw_key
       end
